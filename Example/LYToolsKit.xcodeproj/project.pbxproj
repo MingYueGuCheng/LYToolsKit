@@ -58,14 +58,15 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		64056FE0219ABEE700BAA038 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		76E7A6CDA8B2149938673FD5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		76E7A6CDA8B2149938673FD5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		79E87B4827C7BC097BE8F434 /* Pods-LYToolsKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYToolsKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYToolsKit_Tests/Pods-LYToolsKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CB206E00401861E57D0D7AC /* Pods_LYToolsKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYToolsKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		804D70C153F73704C47B1EFF /* Pods-LYToolsKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYToolsKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYToolsKit_Example/Pods-LYToolsKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C26F0866FF7B175C72571907 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		DD134B59D1192D5B7B838120 /* LYToolsKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LYToolsKit.podspec; path = ../LYToolsKit.podspec; sourceTree = "<group>"; };
+		C26F0866FF7B175C72571907 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		DD134B59D1192D5B7B838120 /* LYToolsKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LYToolsKit.podspec; path = ../LYToolsKit.podspec; sourceTree = "<group>"; };
 		EDAD06EECFAF5C7B2168F5A4 /* Pods-LYToolsKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYToolsKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYToolsKit_Tests/Pods-LYToolsKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +190,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				64056FE0219ABEE700BAA038 /* CHANGELOG.md */,
 				DD134B59D1192D5B7B838120 /* LYToolsKit.podspec */,
 				C26F0866FF7B175C72571907 /* README.md */,
 				76E7A6CDA8B2149938673FD5 /* LICENSE */,
@@ -247,6 +249,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = yyly;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 2V8GEF8RXB;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -326,12 +331,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LYToolsKit_Example/Pods-LYToolsKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LYToolsKit/LYToolsKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LYToolsKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -497,11 +504,12 @@
 			baseConfigurationReference = 804D70C153F73704C47B1EFF /* Pods-LYToolsKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2V8GEF8RXB;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LYToolsKit/LYToolsKit-Prefix.pch";
 				INFOPLIST_FILE = "LYToolsKit/LYToolsKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingyuegucheng.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -512,11 +520,12 @@
 			baseConfigurationReference = 33F8121BB326A3D1184833E0 /* Pods-LYToolsKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2V8GEF8RXB;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LYToolsKit/LYToolsKit-Prefix.pch";
 				INFOPLIST_FILE = "LYToolsKit/LYToolsKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mingyuegucheng.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
