@@ -5,6 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/LYToolsKit.svg?style=flat)](https://cocoapods.org/pods/LYToolsKit)
 [![Platform](https://img.shields.io/cocoapods/p/LYToolsKit.svg?style=flat)](https://cocoapods.org/pods/LYToolsKit)
 
+## 说明
+LYToolsKit 是常用组件的总结，包含Foundation、UI等，
+```
+注意：
+1. 本库前缀为【LY】
+2. 分类中的方法需要以【ly_】开始
+3. 尽量标明方法的用途
+4. 方法用途不需要重复
+5. 各个子库之间不可以相互依赖【不包含：Utility库】
+```
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -22,7 +33,7 @@ pod 'LYToolsKit'
 
 ## Author
 
-yyly, wulang@99fenqi.com
+yyly, mingyuegucheng@icloud.com
 
 ## License
 
