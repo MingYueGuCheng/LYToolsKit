@@ -6,9 +6,9 @@
 [![Platform](https://img.shields.io/cocoapods/p/LYToolsKit.svg?style=flat)](https://cocoapods.org/pods/LYToolsKit)
 
 ## 说明
-LYToolsKit 是常用组件的总结，包含Foundation、UI等，
+LYToolsKit 是一个轻量级的常用组件库，包含Foundation、UI等简单扩展，可以极大的提高开发效率。
 ```
-注意：
+维护注意：
 1. 本库前缀为【LY】
 2. 分类中的方法需要以【ly_】开始
 3. 尽量标明方法的用途
