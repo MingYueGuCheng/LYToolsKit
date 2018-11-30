@@ -1,11 +1,11 @@
 PODS:
-  - LYToolsKit (0.1.0):
-    - LYToolsKit/Foundation (= 0.1.0)
-    - LYToolsKit/UI (= 0.1.0)
-    - LYToolsKit/Utility (= 0.1.0)
-  - LYToolsKit/Foundation (0.1.0)
-  - LYToolsKit/UI (0.1.0)
-  - LYToolsKit/Utility (0.1.0):
+  - LYToolsKit (0.1.1):
+    - LYToolsKit/Foundation (= 0.1.1)
+    - LYToolsKit/UI (= 0.1.1)
+    - LYToolsKit/Utility (= 0.1.1)
+  - LYToolsKit/Foundation (0.1.1)
+  - LYToolsKit/UI (0.1.1)
+  - LYToolsKit/Utility (0.1.1):
     - LYToolsKit/UI
     - Masonry
   - Masonry (1.1.0)
@@ -22,7 +22,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LYToolsKit: c4b27e0e6f3239e107ec12561f6ba43db738ecb1
+  LYToolsKit: 71b7221fa2d6fd2c9c80ad8c0baca8829648ba25
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 65c98e54016424e0cbfc45321fc4dc72ccb68329

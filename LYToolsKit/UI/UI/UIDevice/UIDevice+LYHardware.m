@@ -22,11 +22,17 @@
 }
 
 + (BOOL)ly_hasFringeScreen {
-    if (@available(iOS 11.0, *)) {
-        return !UIEdgeInsetsEqualToEdgeInsets([[UIApplication sharedApplication].windows.firstObject safeAreaInsets], UIEdgeInsetsZero);
-    } else {
-        return NO;
+    BOOL isFringeScreen = NO;
+    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
+        return isFringeScreen;
     }
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        if (window.safeAreaInsets.bottom > 0.0) {
+            isFringeScreen = YES;
+        }
+    }
+    return isFringeScreen;
 }
 
 
