@@ -88,5 +88,68 @@ NSString *const kLYURLFragment = @"FRAGMENT";
     
     return [urlStr stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
+/**
+ url拼接参数
+ 
+ @param url url
+ @param params 参数
+ @param cover YES：覆盖已经存在的参数；NO：跳过已经存在的参数；
+ @return url
+ */
++ (instancetype)ly_stringURL:(NSString *)url appendParams:(NSDictionary<NSString *, NSString *> *)params cover:(BOOL)cover {
+    if (![url isKindOfClass:[NSString class]]) {
+        return nil;
+    }
+    
+    url = [url ly_stringAddingPercentEscapesChineseSpace];
+    if (!url.length) {
+        return nil;
+    }
+    
+    if (!params.count) {
+        return url;
+    }
+    
+    NSURLComponents *urlComponent = [NSURLComponents componentsWithString:url];
+    __block NSMutableArray *queryItems = [urlComponent.queryItems mutableCopy];
+    if (!queryItems) {
+        queryItems = [NSMutableArray array];
+    }
+    
+    [params enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[NSString class]]) {
+            __block NSUInteger existIndex = NSNotFound;
+            [urlComponent.queryItems enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(NSURLQueryItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if ([key isEqualToString:obj.name]) {
+                    existIndex = idx;
+                    *stop = YES;
+                }
+            }];
+            if (existIndex == NSNotFound) {
+                NSURLQueryItem *item = [NSURLQueryItem queryItemWithName:key value:obj];
+                [queryItems addObject:item];
+            } else {
+                if (cover) {
+                    NSURLQueryItem *item = queryItems[existIndex];
+                    queryItems[existIndex] = [NSURLQueryItem queryItemWithName:item.name value:obj];
+                }
+            }
+        }
+    }];
+    
+    if (queryItems.count) {
+        urlComponent.queryItems = queryItems;
+    }
+    
+    return urlComponent.string;
+}
+
++ (instancetype)ly_stringURL:(NSString *)url appendParams:(NSDictionary<NSString *, NSString *> *)params {
+    return [self ly_stringURL:url appendParams:params cover:YES];
+}
+
++ (instancetype)ly_stringURL:(NSString *)url appendNotExistParams:(NSDictionary<NSString *, NSString *> *)params {
+    return [self ly_stringURL:url appendParams:params cover:NO];
+}
 
 @end

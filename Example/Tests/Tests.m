@@ -32,5 +32,14 @@
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
+- (void)testURLappendParams {
+    NSString *target1 = nil;
+    NSString *url1 = [NSString ly_stringURL:target1 appendParams:@{@"name": @"在自自在在"}];
+    XCTAssertNil(url1, @"url1 不是nil");
+    NSString *target2 = @"";
+    NSString *url2 = [NSString ly_stringURL:target2 appendNotExistParams:@{@"age": @1234}];
+    XCTAssertNotNil(url2, @"url2 是nil");
+}
+
 @end
 
