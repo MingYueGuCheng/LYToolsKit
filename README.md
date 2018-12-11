@@ -12,8 +12,9 @@ LYToolsKit 是一个轻量级的常用组件库，包含Foundation、UI等简单
 1. 本库前缀为【LY】
 2. 分类中的方法需要以【ly_】开始
 3. 尽量标明方法的用途
-4. 方法用途不需要重复
+4. 禁止重复用途的方法
 5. 各个子库之间不可以相互依赖【不包含：Utility库】
+6. 注明返回值、参数是否为空
 ```
 
 ## Example
@@ -38,3 +39,4 @@ yyly, mingyuegucheng@icloud.com
 ## License
 
 LYToolsKit is available under the MIT license. See the LICENSE file for more info.
+
