@@ -5,6 +5,11 @@
 [![License](https://img.shields.io/cocoapods/l/LYToolsKit.svg?style=flat)](https://cocoapods.org/pods/LYToolsKit)
 [![Platform](https://img.shields.io/cocoapods/p/LYToolsKit.svg?style=flat)](https://cocoapods.org/pods/LYToolsKit)
 
+## 功能
+```工具组件
+方法交互，时间处理，JS脚本，KB-MB-GB转换，URL解析，URL参数拼接，URL编码，Alert弹框，设备信息，网络信息，操作轴迹，View快捷构建，图片压缩，图片放缩，倒计时，蒙版
+```
+
 ## 说明
 LYToolsKit 是一个轻量级的常用组件库，包含Foundation、UI等简单扩展，可以极大的提高开发效率。
 ```
