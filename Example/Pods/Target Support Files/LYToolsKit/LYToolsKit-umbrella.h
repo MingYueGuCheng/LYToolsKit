@@ -31,6 +31,7 @@
 #import "UIView+LYCut.h"
 #import "UIView+LYEnlargeTouchArea.h"
 #import "UIView+LYTouch.h"
+#import "UIBarButtonItem+LYExt.h"
 #import "UIButton+LYExt.h"
 #import "UIImageView+LYExt.h"
 #import "UILabel+LYExt.h"
@@ -39,6 +40,7 @@
 #import "UIView+LYExt.h"
 #import "LYUtility.h"
 #import "LYTouchTrace.h"
+#import "LYHyperlinksButton.h"
 #import "UICountingLabel.h"
 #import "LYCoverView.h"
 

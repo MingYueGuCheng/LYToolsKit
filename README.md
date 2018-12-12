@@ -45,3 +45,8 @@ yyly, mingyuegucheng@icloud.com
 
 LYToolsKit is available under the MIT license. See the LICENSE file for more info.
 
+## 关于命令
+```提交新版到cocoapods
+pod trunk push LYToolsKit.podspec --allow-warnings
+```
+

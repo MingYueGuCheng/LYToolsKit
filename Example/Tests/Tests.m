@@ -41,5 +41,15 @@
     XCTAssertNotNil(url2, @"url2 是nil");
 }
 
+- (void)testOperator {
+    LYOperatorType type = [UIDevice ly_operatorType];
+    XCTAssertEqual(LYOperatorTypeUnKnown, type);
+}
+
+- (void)testFileSize {
+    NSData *data = UIImagePNGRepresentation([UIImage imageNamed:@"照片"]);
+    CGFloat size = [NSString ly_fileSizeMBFromData:data];
+    XCTAssertEqual(size, 0);
+}
 @end
 

@@ -28,4 +28,20 @@
     }
 }
 
++ (instancetype)ly_fileSizeFromData:(NSData *)data {
+   return [self ly_fileSizeToString:data.length];
+}
+
++ (CGFloat)ly_fileSizeKBFromData:(NSData *)data {
+    return data.length / (1024 * 0.1);
+}
+
++ (CGFloat)ly_fileSizeMBFromData:(NSData *)data {
+    return data.length / (pow(1024, 2) * 0.1);
+}
+
++ (CGFloat)ly_fileSizeGBFromData:(NSData *)data {
+    return data.length / (pow(1024, 3) * 0.1);
+}
+
 @end

@@ -24,6 +24,14 @@ typedef NS_ENUM(NSUInteger, LYNetworkType) {
     LYNetworkTypeWWAN4G,
 };
 
+typedef NS_ENUM(NSUInteger, LYOperatorType) {
+    LYOperatorTypeUnKnown,
+    LYOperatorTypeChinaMobile,/**< 移动运营商 */
+    LYOperatorTypeChinaUnicom,/**< 联通运营商 */
+    LYOperatorTypeChinaTelecom,/**< 电信运营商 */
+    LYOperatorTypeChinaTietong,/**< 铁通运营商 */
+};
+
 @interface UIDevice (LYHardware)
 
 /** Hardware type */
@@ -44,6 +52,7 @@ typedef NS_ENUM(NSUInteger, LYNetworkType) {
 + (NSString *)ly_macAddress;
 
 + (LYNetworkType)ly_networkType;
++ (LYOperatorType)ly_operatorType;
 
 @end
 

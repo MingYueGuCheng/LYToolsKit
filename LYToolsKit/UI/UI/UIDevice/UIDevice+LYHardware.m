@@ -170,4 +170,28 @@
     return networkType;
 }
 
++ (LYOperatorType)ly_operatorType {
+    LYOperatorType operatorType;
+    CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier *carrier = info.subscriberCellularProvider;
+    if (carrier) {
+        NSString *code = carrier.mobileCountryCode;
+        if ([code isEqualToString:@"00"] || [code isEqualToString:@"02"] || [code isEqualToString:@"07"]) {
+            operatorType = LYOperatorTypeChinaMobile;
+        } else if ([code isEqualToString:@"01"] || [code isEqualToString:@"06"]) {
+            operatorType = LYOperatorTypeChinaUnicom;
+        } else if ([code isEqualToString:@"03"] || [code isEqualToString:@"05"]) {
+            operatorType = LYOperatorTypeChinaTelecom;
+        } else if ([code isEqualToString:@"20"]) {
+            operatorType = LYOperatorTypeChinaTietong;
+        } else {
+            operatorType = LYOperatorTypeUnKnown;
+        }
+    } else {
+        operatorType = LYOperatorTypeUnKnown;
+    }
+    
+    return operatorType;
+}
+
 @end

@@ -9,3 +9,6 @@
 ### [0.2.0]
 -【MDF】'NSString+LYURL'方法描述修改
 -【ADD】URL拼接参数功能‘ly_stringURL:appendNotExistParams:’、‘ly_stringURL:appendParams:’
+### [0.3.0]
+-【ADD】'NSString+LYUnits'添加获取文件大小功能
+-【ADD】'UIDevice+LYHardware'添加获取运营商功能

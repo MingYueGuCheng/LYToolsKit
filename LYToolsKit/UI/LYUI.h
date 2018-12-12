@@ -24,6 +24,7 @@
 #import <LYToolsKit/UIButton+LYExt.h>
 #import <LYToolsKit/UITextField+LYExt.h>
 #import <LYToolsKit/UITextView+LYExt.h>
+#import <LYToolsKit/UIBarButtonItem+LYExt.h>
 
 #pragma mark - UIButton
 #import <LYToolsKit/UIButton+LYDelay.h>
