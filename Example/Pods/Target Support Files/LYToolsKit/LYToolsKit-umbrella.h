@@ -14,6 +14,7 @@
 #import "LYFoundation.h"
 #import "NSDate+LYString.h"
 #import "NSObject+LYHook.h"
+#import "NSString+LYCoding.h"
 #import "NSString+LYJS.h"
 #import "NSString+LYJudge.h"
 #import "NSString+LYUnits.h"

@@ -1,6 +1,6 @@
 {
   "name": "LYToolsKit",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "summary": "LYToolsKit is Foundation|UI|Utility SDK.",
   "homepage": "https://github.com/yyly/LYToolsKit",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/yyly/LYToolsKit.git",
-    "tag": "0.2.0"
+    "tag": "0.3.0"
   },
   "platforms": {
     "ios": "9.0"

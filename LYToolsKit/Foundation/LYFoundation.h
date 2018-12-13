@@ -28,6 +28,7 @@
 #import <LYToolsKit/NSString+LYURL.h>
 #import <LYToolsKit/NSString+LYJudge.h>
 #import <LYToolsKit/NSString+LYUnits.h>
+#import <LYToolsKit/NSString+LYCoding.h>
 
 #pragma mark - NSURL
 
