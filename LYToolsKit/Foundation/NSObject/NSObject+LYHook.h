@@ -13,6 +13,24 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (LYHook)
 
 /**
+ block重写方式实现
+ void(*)(id, SEL, ...)
+ id(*)(id, SEL, ...)
+ @param targetSEL 目标方法选择器
+ @param block 该 block 必须返回一个 block，返回的 block 将被当成 targetSEL 的新实现
+ @return 是否重写成功
+ */
++ (BOOL)ly_OverrideImplement:(SEL)targetSEL block:(id(^)(Class originClass, SEL originSEL, IMP originIMP))block;
+/**
+ block重写方式实现
+ void(*)(id, SEL, ...)
+ id(*)(id, SEL, ...)
+ @param targetSEL 目标方法选择器
+ @param block 该 block 必须返回一个 block，返回的 block 将被当成 targetSEL 的新实现
+ @return 是否重写成功
+ */
+- (BOOL)ly_OverrideImplement:(SEL)targetSEL block:(id(^)(Class originClass, SEL originSEL, IMP originIMP))block;
+/**
  hook类方法的实现
 
  @param origSEL origSEL 需要hook的方法
