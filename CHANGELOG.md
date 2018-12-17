@@ -12,4 +12,4 @@
 ### [0.3.0]
 -【ADD】'NSString+LYUnits'添加获取文件大小功能
 -【ADD】'UIDevice+LYHardware'添加获取运营商功能
--【ADD】'NSObject+LYHook'添加通过blockf重写方法的功能
+-【ADD】'NSObject+LYHook'添加通过block重写方法的功能
