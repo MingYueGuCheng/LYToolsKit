@@ -17,4 +17,7 @@
 #pragma mark - UIApplication
 #import <LYToolsKit/LYTouchTrace.h>
 
+#pragma mark - UIButton
+#import <LYToolsKit/LYHyperlinksButton.h>
+
 #endif /* LYUtility_h */

@@ -12,8 +12,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (LYUnits)
 
-/** 数据大小转换KB、MB、GB */
+/**
+ 获取数据大小 单位：KB、MB、GB
+ @param fileSize 文件字节大小
+ @return 数据大小
+ @code 感谢@Yi Xu,<youyouapp><CuiYiLong>
+ */
 + (instancetype)ly_fileSizeToString:(unsigned long long)fileSize;
++ (instancetype)ly_fileSizeFromData:(NSData *)data;
++ (CGFloat)ly_fileSizeKBFromData:(NSData *)data;
++ (CGFloat)ly_fileSizeMBFromData:(NSData *)data;
++ (CGFloat)ly_fileSizeGBFromData:(NSData *)data;
+
 
 @end
 
