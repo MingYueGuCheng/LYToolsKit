@@ -2,7 +2,7 @@
 //  UIView+LYCut.h
 //  shuaidanbao
 //
-//  Created by 吴浪 on 15/12/28.
+//  Created by 似水灵修 on 15/12/28.
 //  Copyright © 2015年 sdb. All rights reserved.
 //
 

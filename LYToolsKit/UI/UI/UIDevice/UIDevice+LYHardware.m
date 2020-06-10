@@ -2,7 +2,7 @@
 //  UIDevice+LYHardware.m
 //  LYUI
 //
-//  Created by 吴浪 on 2018/11/9.
+//  Created by 似水灵修 on 2018/11/9.
 //
 
 #import "UIDevice+LYHardware.h"
@@ -192,6 +192,27 @@
     }
     
     return operatorType;
+}
+
++ (NSString *)ly_bundleSeedID {
+    NSDictionary *query = [NSDictionary dictionaryWithObjectsAndKeys:
+                           (id)kSecClassGenericPassword, kSecClass,
+                           @"bundleSeedID", kSecAttrAccount,
+                           @"", kSecAttrService,
+                           (id)kCFBooleanTrue, kSecReturnAttributes,nil];
+    CFDictionaryRef result = nil;
+    OSStatus status = SecItemCopyMatching((CFDictionaryRef)query, (CFTypeRef *)&result);
+    if (status == errSecItemNotFound) {
+        status = SecItemAdd((CFDictionaryRef)query, (CFTypeRef *)&result);
+    }
+    if (status != errSecSuccess) {
+        return nil;
+    }
+    NSString *accessGroup = [(__bridge NSDictionary *)result objectForKey:(id)kSecAttrAccessGroup];
+    NSArray *components = [accessGroup componentsSeparatedByString:@"."];
+    NSString *bundleSeedID = [[components objectEnumerator] nextObject];
+    CFRelease(result);
+    return bundleSeedID;
 }
 
 @end

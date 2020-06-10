@@ -39,6 +39,8 @@
 #import "UITextField+LYExt.h"
 #import "UITextView+LYExt.h"
 #import "UIView+LYExt.h"
+#import "LYSmallCache.h"
+#import "LYSubscribeManger.h"
 #import "LYUtility.h"
 #import "LYTouchTrace.h"
 #import "LYHyperlinksButton.h"

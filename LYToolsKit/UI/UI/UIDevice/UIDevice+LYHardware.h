@@ -2,7 +2,7 @@
 //  UIDevice+LYHardware.h
 //  LYUI
 //
-//  Created by 吴浪 on 2018/11/9.
+//  Created by 似水灵修 on 2018/11/9.
 //
 
 #import <UIKit/UIKit.h>
@@ -53,6 +53,8 @@ typedef NS_ENUM(NSUInteger, LYOperatorType) {
 
 + (LYNetworkType)ly_networkType;
 + (LYOperatorType)ly_operatorType;
+
++ (nullable NSString *)ly_bundleSeedID;
 
 @end
 

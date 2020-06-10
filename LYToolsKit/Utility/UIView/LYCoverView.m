@@ -2,7 +2,7 @@
 //  LYCoverView.m
 //  LYUI
 //
-//  Created by 吴浪 on 16/6/7.
+//  Created by 似水灵修 on 16/6/7.
 //  Copyright © 2016年 LY. All rights reserved.
 //
 

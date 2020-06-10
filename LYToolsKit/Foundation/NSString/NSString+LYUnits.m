@@ -2,7 +2,7 @@
 //  NSString+LYUnits.m
 //  shuaidanbao
 //
-//  Created by 吴浪 on 15/9/11.
+//  Created by 似水灵修 on 15/9/11.
 //  Copyright (c) 2015年 sdb. All rights reserved.
 //
 

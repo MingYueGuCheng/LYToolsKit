@@ -2,7 +2,7 @@
 //  LYAlertController.h
 //  LYUI
 //
-//  Created by 吴浪 on 2017/3/17.
+//  Created by 似水灵修 on 2017/3/17.
 //  Copyright © 2017年 LY. All rights reserved.
 //
 
@@ -52,7 +52,7 @@ typedef LYAlertController *_Nonnull(^LYAlertActionTitle)(NSString *title);
  */
 @property (nonatomic, assign) NSTimeInterval toastStyleDuration;
 @property (nonatomic, copy) void (^toastStyleDidDismiss)(void); /** toastStyle关闭后 */
-@property (nonatomic, assign) BOOL gnh_AlertAnimated; /** 弹框展示与消失动画，默认YES */
+@property (nonatomic, assign) BOOL ly_alertAnimated; /** 弹框展示与消失动画，默认YES */
 @property (nonatomic, copy) void (^alertDidShow)(void); /** alert弹出后 */
 /**
  链式构造alert视图按钮，添加alertAction按钮，默认样式

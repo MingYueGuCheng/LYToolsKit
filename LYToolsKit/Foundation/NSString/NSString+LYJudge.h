@@ -2,7 +2,7 @@
 //  NSString+LYJudge.h
 //  LYToolsKit
 //
-//  Created by 吴浪 on 2018/11/12.
+//  Created by 似水灵修 on 2018/11/12.
 //
 
 #import <Foundation/Foundation.h>
@@ -17,6 +17,5 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)ly_isPureFloat;
 
 @end
-
 
 NS_ASSUME_NONNULL_END

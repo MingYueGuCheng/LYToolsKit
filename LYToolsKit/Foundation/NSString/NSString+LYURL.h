@@ -2,7 +2,7 @@
 //  NSString+LYURL.h
 //  LYToolsKit
 //
-//  Created by 吴浪 on 2018/11/12.
+//  Created by 似水灵修 on 2018/11/12.
 //
 
 #import <Foundation/Foundation.h>
@@ -23,14 +23,14 @@ extern NSString *const kLYURLFragment;
 #pragma clang diagnostic ignored "-Wdocumentation"
 /**
  解析URL
- 格式如：http://host.name:8888/test/page/?keyA=valueA&keyB=valueB#top
- @param    kLYURLScheme   如 http
- @param    kLYURLHost     如 host.name
- @param    kLYURLPort     如 8888
- @param    kLYURLParams   如 {keyA:valueA, keyB:valueB}
- @param    kLYURLQuerys   如 [{keyA:valueA}, {keyB:valueB}],含重复
- @param    kLYURLPath     如 /test/page
- @param    kLYURLFragment 如 top
+ 示例：http://host.name:8888/test/page/?keyA=valueA&keyB=valueB#top
+ @param    kLYURLScheme     http
+ @param    kLYURLHost          host.name
+ @param    kLYURLPort          8888
+ @param    kLYURLParams      {keyA: valueA, keyB: valueB}
+ @param    kLYURLQuerys      [{keyA: valueA}, {keyB: valueB}]
+ @param    kLYURLPath           /test/page
+ @param    kLYURLFragment  top
  @return   NSDictionary
  */
 - (NSDictionary *)ly_paramsFromURLString;

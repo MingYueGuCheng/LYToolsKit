@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+LYHook.h"
-#import <objc/runtime.h>
+@import ObjectiveC.runtime;
 
 @implementation NSObject (LYHook)
 

@@ -1,4 +1,6 @@
-!use_frameworks!
+#source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
 
 target 'LYToolsKit_Example' do
   pod 'LYToolsKit', :path => '../'
@@ -6,6 +8,5 @@ target 'LYToolsKit_Example' do
   target 'LYToolsKit_Tests' do
     inherit! :search_paths
 
-    
   end
 end

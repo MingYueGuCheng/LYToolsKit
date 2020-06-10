@@ -1,11 +1,11 @@
 PODS:
-  - LYToolsKit (0.3.0):
-    - LYToolsKit/Foundation (= 0.3.0)
-    - LYToolsKit/UI (= 0.3.0)
-    - LYToolsKit/Utility (= 0.3.0)
-  - LYToolsKit/Foundation (0.3.0)
-  - LYToolsKit/UI (0.3.0)
-  - LYToolsKit/Utility (0.3.0):
+  - LYToolsKit (1.0.0):
+    - LYToolsKit/Foundation (= 1.0.0)
+    - LYToolsKit/UI (= 1.0.0)
+    - LYToolsKit/Utility (= 1.0.0)
+  - LYToolsKit/Foundation (1.0.0)
+  - LYToolsKit/UI (1.0.0)
+  - LYToolsKit/Utility (1.0.0):
     - LYToolsKit/UI
     - Masonry
   - Masonry (1.1.0)
@@ -14,7 +14,7 @@ DEPENDENCIES:
   - LYToolsKit (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Masonry
 
 EXTERNAL SOURCES:
@@ -22,9 +22,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LYToolsKit: fb16e09795c86ddf6afe2aa0f2b36b3a6480afdb
+  LYToolsKit: 8a83a9e309895d6c7c5a60dc23ea8a57b14d982c
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 65c98e54016424e0cbfc45321fc4dc72ccb68329
+PODFILE CHECKSUM: 1eb1cb8c92f99c5310a7c3b0ab624d91596a12ef
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

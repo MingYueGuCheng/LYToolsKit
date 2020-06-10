@@ -2,7 +2,7 @@
 //  LYAlertController.m
 //  LYUI
 //
-//  Created by 吴浪 on 2017/3/17.
+//  Created by 似水灵修 on 2017/3/17.
 //  Copyright © 2017年 LY. All rights reserved.
 //
 
@@ -39,7 +39,7 @@ typedef void (^LYAlertActionsConfig)(LYAlertActionBlock actionBlock);
 
 + (instancetype)ly_alertControllerWithTitle:(NSString *)title message:(NSString *)message preferredStyle:(UIAlertControllerStyle)preferredStyle {
     LYAlertController *alertAC = [self alertControllerWithTitle:title message:message preferredStyle:preferredStyle];
-    alertAC.gnh_AlertAnimated = YES;
+    alertAC.ly_alertAnimated = YES;
     alertAC.toastStyleDuration = kShowDurationDefault;
     return alertAC;
 }
@@ -100,7 +100,7 @@ typedef void (^LYAlertActionsConfig)(LYAlertActionBlock actionBlock);
         } else {
             NSTimeInterval duration = self.toastStyleDuration;
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self dismissViewControllerAnimated:self.gnh_AlertAnimated completion:^{
+                [self dismissViewControllerAnimated:self.ly_alertAnimated completion:^{
                     if (self.toastStyleDidDismiss) {
                         self.toastStyleDidDismiss();
                     }
@@ -130,7 +130,7 @@ typedef void (^LYAlertActionsConfig)(LYAlertActionBlock actionBlock);
     //配置action 响应
     alertAC.alertActionsConfig(actionsBlock);
     //弹出视图
-    [self presentViewController:alertAC animated:alertAC.gnh_AlertAnimated completion:^{
+    [self presentViewController:alertAC animated:alertAC.ly_alertAnimated completion:^{
         if (alertAC.alertDidShow) {
             alertAC.alertDidShow();
         }

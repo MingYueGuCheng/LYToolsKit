@@ -2,7 +2,7 @@
 //  LYHyperlinksButton.h
 //  shuaidanbao
 //
-//  Created by 吴浪 on 15/10/20.
+//  Created by 似水灵修 on 15/10/20.
 //  Copyright © 2015年 sdb. All rights reserved.
 //  超链接按钮
 

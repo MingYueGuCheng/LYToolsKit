@@ -2,7 +2,7 @@
 //  UIImage+LYBase64.m
 //  LYUI
 //
-//  Created by 吴浪 on 16/5/6.
+//  Created by 似水灵修 on 16/5/6.
 //  Copyright © 2016年 dingli. All rights reserved.
 //
 
@@ -17,8 +17,6 @@
         if (decodeImageData) {
             image = [self imageWithData:decodeImageData];
         }
-    }else {
-        NSLog(@"base64字符串为空");
     }
     return image;
 }

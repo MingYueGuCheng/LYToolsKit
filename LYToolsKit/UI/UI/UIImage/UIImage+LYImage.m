@@ -2,7 +2,7 @@
 //  UIImage+LYImage.m
 //  LYUI
 //
-//  Created by 吴浪 on 2018/11/9.
+//  Created by 似水灵修 on 2018/11/9.
 //
 
 #import "UIImage+LYImage.h"

@@ -2,7 +2,7 @@
 //  UIColor+LYHex.m
 //  LYUI
 //
-//  Created by 吴浪 on 16/5/12.
+//  Created by 似水灵修 on 16/5/12.
 //  Copyright © 2016年 dingli. All rights reserved.
 //
 
@@ -159,11 +159,17 @@
     [[NSScanner scannerWithString:gString] scanHexInt:&g];
     [[NSScanner scannerWithString:bString] scanHexInt:&b];
     
-    return [UIColor colorWithRed:((CGFloat) r / 255.0f)
-                           green:((CGFloat) g / 255.0f)
-                            blue:((CGFloat) b / 255.0f)
-                           alpha:alpha];
-    
+    if (@available(iOS 10, *)) {
+        return [UIColor colorWithDisplayP3Red:((CGFloat) r / 255.0f)
+                                        green:((CGFloat) g / 255.0f)
+                                         blue:((CGFloat) b / 255.0f)
+                                        alpha:alpha];
+    } else {
+        return [UIColor colorWithRed:((CGFloat) r / 255.0f)
+                               green:((CGFloat) g / 255.0f)
+                                blue:((CGFloat) b / 255.0f)
+                               alpha:alpha];
+    }
 }
 
 @end

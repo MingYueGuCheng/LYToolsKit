@@ -2,7 +2,7 @@
 //  UIImage+LYBase64.h
 //  LYUI
 //
-//  Created by 吴浪 on 16/5/6.
+//  Created by 似水灵修 on 16/5/6.
 //  Copyright © 2016年 dingli. All rights reserved.
 //
 

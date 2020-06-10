@@ -2,7 +2,7 @@
 //  NSString+LYJS.h
 //  shuaidanbao
 //
-//  Created by 吴浪 on 15/11/17.
+//  Created by 似水灵修 on 15/11/17.
 //  Copyright © 2015年 sdb. All rights reserved.
 //  用于导出常用javascript，做一些简单的页面处理
 

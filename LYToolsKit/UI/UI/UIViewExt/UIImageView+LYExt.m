@@ -2,8 +2,8 @@
 //  UIImageView+LYExt.m
 //  Tools
 //
-//  Created by 吴浪 on 16/3/11.
-//  Copyright © 2016年 吴浪. All rights reserved.
+//  Created by 似水灵修 on 16/3/11.
+//  Copyright © 2016年 似水灵修. All rights reserved.
 //
 
 #import "UIImageView+LYExt.h"
