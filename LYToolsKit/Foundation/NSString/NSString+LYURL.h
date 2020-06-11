@@ -5,7 +5,7 @@
 //  Created by 似水灵修 on 2018/11/12.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 NS_ASSUME_NONNULL_BEGIN
 

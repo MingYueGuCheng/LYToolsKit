@@ -12,13 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImageView (LYExt)
 
-/** 快速创建
- *
- *  @param  imageNamed 图片名
- *
- *  @return 返回ImageView对象
- */
-+ (instancetype)ly_ImageViewWithImageNamed:(nullable NSString *)imageNamed;
+/// 快速创建
+/// @param imageName 图片
++ (instancetype)ly_imageViewWithImageName:(nullable NSString *)imageName;
 
 @end
 

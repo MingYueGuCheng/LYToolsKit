@@ -6,18 +6,22 @@
 //
 
 #import "UIView+LYTouch.h"
-#import <objc/runtime.h>
+@import ObjectiveC.runtime;
 
 static NSString *const kSingleTap = @"singleTap";
 
 @implementation UIView (LYTouch)
 
-- (void)ly_singleTapped:(LYSingleTappedActionBlock)block {
-    [self ly_singleTappedGesture:nil block:block];
+- (void)ly_singleTap:(LYTapActionBlock)block {
+    [self ly_tapGestureConfig:nil block:block];
 }
 
-- (void)ly_singleTappedGesture:(LYSingleTappedGestureConfig)config block:(LYSingleTappedActionBlock)block {
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ly_singleTap:)];
+- (void)ly_tap:(LYTapGestureConfig)config block:(LYTapActionBlock)block {
+    [self ly_tapGestureConfig:config block:block];
+}
+
+- (void)ly_tapGestureConfig:(LYTapGestureConfig)config block:(LYTapActionBlock)block {
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ly_singleTapAction:)];
     if (config) {
         config(tapGesture);
     }
@@ -27,8 +31,8 @@ static NSString *const kSingleTap = @"singleTap";
     self.userInteractionEnabled = YES;
 }
 
-- (void)ly_singleTap:(UITapGestureRecognizer *)tap {
-    LYSingleTappedActionBlock block = objc_getAssociatedObject(self, (__bridge const void * _Nonnull)(kSingleTap));
+- (void)ly_singleTapAction:(UITapGestureRecognizer *)tap {
+    LYTapActionBlock block = objc_getAssociatedObject(self, (__bridge const void * _Nonnull)(kSingleTap));
     if (block) {
         block(self);
     }

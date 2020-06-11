@@ -10,7 +10,7 @@
 
 @implementation UILabel (LYExt)
 
-+ (instancetype)ly_LabelWithTitle:(NSString *)title font:(UIFont *)font titleColor:(UIColor *)titleColor {
++ (instancetype)ly_labelWithTitle:(NSString *)title font:(UIFont *)font titleColor:(UIColor *)titleColor {
     UILabel *label = [[self alloc] init];
     label.textColor = titleColor;
     label.font = font;

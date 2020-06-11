@@ -9,6 +9,7 @@
 @import Foundation;
 
 NS_ASSUME_NONNULL_BEGIN
+
 typedef id _Nullable (^LYSmallCacheFailToFind)(_Nullable Class cls, NSString * const key);
 
 @interface LYSmallCache : NSObject
@@ -30,5 +31,6 @@ typedef id _Nullable (^LYSmallCacheFailToFind)(_Nullable Class cls, NSString * c
 + (void)removeAllObjcs;
 
 @end
+
 NS_ASSUME_NONNULL_END
 

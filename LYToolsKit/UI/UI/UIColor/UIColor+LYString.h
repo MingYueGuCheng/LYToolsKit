@@ -6,7 +6,7 @@
 //  Copyright © 2016年 dingli. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -28,12 +28,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
 @interface UIColor (LYHex)
 
-/** 将16进制颜色值如#000000转换成UIColor */
-+ (instancetype)ly_colorWithHexString:(NSString *)hex;
-+ (instancetype)ly_colorWithHexString:(NSString *)hex alpha:(CGFloat)alpha;
+/// 解析16进制颜色值
+/// @param hex 16进制
+/// @param alpha 透明度
++ (instancetype)ly_colorWithHex:(NSString *)hex alpha:(CGFloat)alpha;
++ (instancetype)ly_colorWithHex:(NSString *)hex;
 
 @end
 

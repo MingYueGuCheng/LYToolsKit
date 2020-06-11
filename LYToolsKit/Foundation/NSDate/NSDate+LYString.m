@@ -31,7 +31,7 @@
 }
 
 - (NSString *)ly_currentTimeString {
-    NSString * newTimeStr = [self.ly_dateFormater stringFromDate:self];
+    NSString *newTimeStr = [self.ly_dateFormater stringFromDate:self];
     return newTimeStr;
 }
 

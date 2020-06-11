@@ -9,6 +9,7 @@
 #import "LYAlertController.h"
 
 static NSTimeInterval const kShowDurationDefault = 1.5f; //toast默认展示时间
+
 #pragma mark - I.LYAlertActionModel
 
 @interface LYAlertActionModel : NSObject
@@ -144,4 +145,5 @@ typedef void (^LYAlertActionsConfig)(LYAlertActionBlock actionBlock);
 - (void)ly_showSheetWithTitle:(NSString *)title message:(NSString *)message appearanceProcess:(LYAlertAppearanceProcess)appearanceProcess actionsBlock:(LYAlertActionBlock)actionsBlock {
     [self ly_showPreferredStyle:UIAlertControllerStyleActionSheet title:title message:message appearanceProcess:appearanceProcess actionsBlock:actionsBlock];
 }
+
 @end

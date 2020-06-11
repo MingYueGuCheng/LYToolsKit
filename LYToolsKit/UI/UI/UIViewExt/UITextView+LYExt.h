@@ -11,13 +11,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UITextView (LYExt)
-/**  快速创建
- *  @param  text         文本
- *  @param  font     字体大小
- *  @param  delegate     代理
- *  @return 返回TextView对象
- */
-+ (instancetype)ly_TextViewWithText:(nullable NSString *)text
+
+/// 快速创建
+/// @param text 标题
+/// @param font 标题字体
+/// @param textColor 标题颜色
+/// @param delegate 代理
++ (instancetype)ly_textViewWithText:(nullable NSString *)text
                                font:(nullable UIFont *)font
                           textColor:(nullable UIColor *)textColor
                            delegate:(nullable id<UITextViewDelegate>)delegate;

@@ -16,6 +16,7 @@ typedef NS_ENUM(NSUInteger, LYImageWaterPlace) {
     LYImageWaterPlaceRightTop,
     LYImageWaterPlaceRightBottom,
 };
+
 @interface UIImage (LYImage)
 
 /**
@@ -33,11 +34,11 @@ typedef NS_ENUM(NSUInteger, LYImageWaterPlace) {
                                 logoMargin:(CGFloat)margin;
 /** 获取图片的主色调 */
 - (UIColor *)ly_mostColor;
-/** 获取App启动图片 */
-+ (instancetype)ly_theLaunchImage;
+
+/// 获取App启动图，采用*.storyboard配置的启动图无法通过该方法获取
++ (instancetype)ly_theLaunchImage __deprecated_msg("iOS 14之后会废弃");
 
 @end
-
 
 @interface UIImage (LYQRCode)
 

@@ -6,22 +6,18 @@
  Basic demonstration of how to use the SystemConfiguration Reachablity APIs.
  */
 
+#import "LYReachability.h"
+@import CoreFoundation;
 #import <arpa/inet.h>
 #import <ifaddrs.h>
 #import <netdb.h>
 #import <sys/socket.h>
 #import <netinet/in.h>
 
-#import <CoreFoundation/CoreFoundation.h>
-
-#import "LYReachability.h"
-
 #pragma mark IPv6 Support
 //Reachability fully support IPv6.  For full details, see ReadMe.md.
 
-
 NSString *kLYReachabilityChangedNotification = @"kNetworkReachabilityChangedNotification";
-
 
 #pragma mark - Supporting functions
 
@@ -47,7 +43,6 @@ static void PrintReachabilityFlags(SCNetworkReachabilityFlags flags, const char*
 #endif
 }
 
-
 static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReachabilityFlags flags, void* info)
 {
 #pragma unused (target, flags)
@@ -58,7 +53,6 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
     // Post a notification to notify the client that the network reachability changed.
     [[NSNotificationCenter defaultCenter] postNotificationName: kLYReachabilityChangedNotification object: noteObject];
 }
-
 
 #pragma mark - Reachability implementation
 
@@ -84,7 +78,6 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 	}
 	return returnValue;
 }
-
 
 + (instancetype)reachabilityWithAddress:(const struct sockaddr *)hostAddress
 {
@@ -121,8 +114,6 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 //reachabilityForLocalWiFi has been removed from the sample.  See ReadMe.md for more information.
 //+ (instancetype)reachabilityForLocalWiFi
 
-
-
 #pragma mark - Start and stop notifier
 
 - (BOOL)startNotifier
@@ -141,7 +132,6 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 	return returnValue;
 }
 
-
 - (void)stopNotifier
 {
 	if (_reachabilityRef != NULL)
@@ -150,16 +140,13 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 	}
 }
 
-
-- (void)dealloc
-{
+- (void)dealloc {
 	[self stopNotifier];
 	if (_reachabilityRef != NULL)
 	{
 		CFRelease(_reachabilityRef);
 	}
 }
-
 
 #pragma mark - Network Flag Handling
 
@@ -209,7 +196,6 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 	return returnValue;
 }
 
-
 - (BOOL)connectionRequired
 {
 	NSAssert(_reachabilityRef != NULL, @"connectionRequired called with NULL reachabilityRef");
@@ -222,7 +208,6 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 
     return NO;
 }
-
 
 - (LYNetworkStatus)currentReachabilityStatus
 {
@@ -237,6 +222,5 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
     
 	return returnValue;
 }
-
 
 @end

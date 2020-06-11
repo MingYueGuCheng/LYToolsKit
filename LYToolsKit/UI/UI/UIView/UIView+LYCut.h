@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
 @interface UIView (LYScreenshot)
 
 /** 视图截屏 */

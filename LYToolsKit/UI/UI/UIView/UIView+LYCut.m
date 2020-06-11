@@ -21,7 +21,6 @@
 
 @end
 
-
 @implementation UIView (LYScreenshot)
 
 /** 视图截屏 */

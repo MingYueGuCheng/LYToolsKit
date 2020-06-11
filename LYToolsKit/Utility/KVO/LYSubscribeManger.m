@@ -36,6 +36,7 @@ static NSString * const kSubscribeContext = @"LYSubscribeMangerContext";
 @property (nonatomic, strong) NSMutableArray <LYSubscribeModel *> *models;
 
 @end
+
 @implementation LYSubscribeManger
 
 + (instancetype)shared {

@@ -28,7 +28,6 @@
     const CGFloat *components = CGColorGetComponents(self.CGColor);
     
     CGFloat r,g,b,a;
-    
     switch (self.ly_spaceModel) {
         case kCGColorSpaceModelMonochrome:
             r = g = b = components[0];
@@ -120,11 +119,11 @@
 @end
 
 @implementation UIColor (LYHex)
-+ (instancetype)ly_colorWithHexString:(NSString *)hex {
-   return [self ly_colorWithHexString:hex alpha:1.0];
++ (instancetype)ly_colorWithHex:(NSString *)hex {
+   return [self ly_colorWithHex:hex alpha:1.0];
 }
 
-+ (instancetype)ly_colorWithHexString:(NSString *)hex alpha:(CGFloat)alpha {
++ (instancetype)ly_colorWithHex:(NSString *)hex alpha:(CGFloat)alpha {
     NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
     // String should be 6 or 8 characters

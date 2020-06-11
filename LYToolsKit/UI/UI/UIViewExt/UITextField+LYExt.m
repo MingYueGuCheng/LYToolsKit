@@ -10,7 +10,7 @@
 
 @implementation UITextField (LYExt)
 
-+ (instancetype)ly_TextFieldWithPlaceholder:(NSString *)placeholder font:(UIFont *)font {
++ (instancetype)ly_textFieldWithPlaceholder:(NSString *)placeholder font:(UIFont *)font {
     UITextField *textField = [[self alloc] init];
     textField.placeholder = placeholder;
     textField.font = font;

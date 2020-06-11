@@ -8,11 +8,8 @@
 #ifndef LYUtility_h
 #define LYUtility_h
 
-#pragma mark - UIView
-#import <LYToolsKit/LYCoverView.h>
-
 #pragma mark - UILable
-#import <LYToolsKit/UICountingLabel.h>
+#import <LYToolsKit/LYCountingLabel.h>
 
 #pragma mark - UIApplication
 #import <LYToolsKit/LYTouchTrace.h>

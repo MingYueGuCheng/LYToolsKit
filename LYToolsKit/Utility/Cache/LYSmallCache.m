@@ -10,7 +10,9 @@
 
 @interface LYSmallCache ()
 @property (nonatomic, strong) NSCache *cache;
+
 @end
+
 @implementation LYSmallCache
 
 + (instancetype)shared {

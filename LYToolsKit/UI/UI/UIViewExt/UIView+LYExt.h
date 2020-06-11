@@ -31,8 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGPoint origin;
 
-/** 快速创建 */
-+ (instancetype)ly_ViewWithColor:(nullable UIColor *)color;
+/// 快速创建
+/// @param color 背景颜色
++ (instancetype)ly_viewWithColor:(nullable UIColor *)color;
 
 @end
 

@@ -21,29 +21,15 @@
   "subspecs": [
     {
       "name": "Foundation",
-      "source_files": "LYToolsKit/Foundation/**/*.{h,m}",
-      "pod_target_xcconfig": {
-        "OTHER_LDFLAGS": "-ObjC"
-      }
+      "source_files": "LYToolsKit/Foundation/**/*.{h,m}"
     },
     {
       "name": "UI",
-      "source_files": "LYToolsKit/UI/**/*.{h,m}",
-      "pod_target_xcconfig": {
-        "OTHER_LDFLAGS": "-ObjC"
-      }
+      "source_files": "LYToolsKit/UI/**/*.{h,m}"
     },
     {
       "name": "Utility",
-      "source_files": "LYToolsKit/Utility/**/*.{h,m}",
-      "dependencies": {
-        "Masonry": [
-
-        ],
-        "LYToolsKit/UI": [
-
-        ]
-      }
+      "source_files": "LYToolsKit/Utility/**/*.{h,m}"
     }
   ]
 }

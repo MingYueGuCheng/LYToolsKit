@@ -5,15 +5,16 @@
 //  Created by 似水灵修 on 2018/11/12.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (LYJudge)
 
-/** 判断整形 */
+/// 整型
 - (BOOL)ly_isPureInt;
-/** 判断浮点形 */
+
+/// 浮点型
 - (BOOL)ly_isPureFloat;
 
 @end

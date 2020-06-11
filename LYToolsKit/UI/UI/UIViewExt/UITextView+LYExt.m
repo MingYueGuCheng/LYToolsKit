@@ -10,7 +10,7 @@
 
 @implementation UITextView (LYExt)
 
-+ (instancetype)ly_TextViewWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor delegate:(id<UITextViewDelegate>)delegate {
++ (instancetype)ly_textViewWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor delegate:(id<UITextViewDelegate>)delegate {
     UITextView *textView = [[self alloc] init];
     textView.text = text;
     textView.textColor = textColor;

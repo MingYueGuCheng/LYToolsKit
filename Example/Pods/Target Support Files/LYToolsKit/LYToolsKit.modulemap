@@ -1,6 +1,0 @@
-framework module LYToolsKit {
-  umbrella header "LYToolsKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

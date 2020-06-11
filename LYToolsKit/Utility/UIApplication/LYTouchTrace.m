@@ -8,8 +8,8 @@
 //
 
 #import "LYTouchTrace.h"
-#import <QuartzCore/QuartzCore.h>
-#import <objc/runtime.h>
+@import QuartzCore;
+@import ObjectiveC.runtime;
 
 @interface LYTouchTrace ()
 - (void)updateTouches:(NSSet *)touches;

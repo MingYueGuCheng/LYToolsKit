@@ -9,13 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^LYSingleTappedActionBlock)(UIView *view);
-typedef void(^LYSingleTappedGestureConfig)(UITapGestureRecognizer *tap);
+typedef void(^LYTapActionBlock)(__kindof UIView *view);
+typedef void(^LYTapGestureConfig)(UITapGestureRecognizer *tap);
 
 @interface UIView (LYTouch)
 
-- (void)ly_singleTapped:(LYSingleTappedActionBlock)block;
-- (void)ly_singleTappedGesture:(nullable LYSingleTappedGestureConfig)config block:(LYSingleTappedActionBlock)block;
+- (void)ly_singleTap:(LYTapActionBlock)block;
+- (void)ly_tap:(LYTapGestureConfig)config block:(LYTapActionBlock)block;
 
 @end
 

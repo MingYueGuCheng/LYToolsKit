@@ -10,6 +10,7 @@
 #import "UIView+LYExt.h"
 
 @implementation UIView (LYExt)
+
 #pragma mark - 快速访问UIView的Frame
 - (void)setX:(CGFloat)x {
     CGRect frame = self.frame;
@@ -133,7 +134,7 @@
 
 
 #pragma mark - 快速创建View
-+ (instancetype)ly_ViewWithColor:(UIColor *)color{
++ (instancetype)ly_viewWithColor:(UIColor *)color{
     UIView *view = [[self alloc] init];
     view.backgroundColor = color;
     return view;

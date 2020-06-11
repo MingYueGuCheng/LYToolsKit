@@ -6,7 +6,7 @@
 //
 
 #import "UIButton+LYDelay.h"
-#import <objc/runtime.h>
+@import ObjectiveC.runtime;
 
 static NSTimeInterval const kDefaultClickTimeInterval = 0.5; /** 按钮默认点击时间间隔 */
 static NSString *const kClickTimeInterval = @"clickTimeInterval";
@@ -16,6 +16,7 @@ static NSString *const kEnabledClickInterval = @"enabledClickInterval";
 @interface UIButton ()
 @property (nonatomic, assign) BOOL isIgnoreEvent;
 @end
+
 @implementation UIButton (LYDelay)
 
 - (void)setLy_clickTimeInterval:(NSTimeInterval)clickTimeInterval {

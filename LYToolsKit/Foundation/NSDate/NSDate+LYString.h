@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 MingYueGuCheng. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 NS_ASSUME_NONNULL_BEGIN
 

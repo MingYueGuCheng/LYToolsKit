@@ -45,6 +45,7 @@ typedef void (^LYAlertActionBlock)(NSInteger index, UIAlertAction *action, LYAle
  @return LYAlertController对象
  */
 typedef LYAlertController *_Nonnull(^LYAlertActionTitle)(NSString *title);
+
 #pragma mark - I.LYAlertController
 @interface LYAlertController : UIAlertController
 /**

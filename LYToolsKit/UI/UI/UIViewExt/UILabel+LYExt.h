@@ -12,15 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UILabel (LYExt)
 
-/**  快速创建
- *
- *  @param  title       title
- *  @param  font    字体大小
- *  @param  titleColor  字体颜色
- *
- *  @return 返回Label对象
- */
-+ (instancetype)ly_LabelWithTitle:(nullable NSString *)title
+/// 快速创建
+/// @param title 标题
+/// @param font 标题字体
+/// @param titleColor 标题颜色
++ (instancetype)ly_labelWithTitle:(nullable NSString *)title
                              font:(nullable UIFont *)font
                        titleColor:(nullable UIColor *)titleColor;
 

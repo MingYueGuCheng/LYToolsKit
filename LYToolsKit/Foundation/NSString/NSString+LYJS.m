@@ -70,7 +70,7 @@
     return jsString;
 }
 
-+ (instancetype)ly_userAgentWeb {
++ (instancetype)ly_userAgent {
     return @"navigator.userAgent";
 }
 

@@ -10,10 +10,9 @@
 
 @implementation UIImageView (LYExt)
 
-+ (instancetype)ly_ImageViewWithImageNamed:(NSString *)imageNamed {
-    UIImage *image = imageNamed.length ? [UIImage imageNamed:imageNamed] : nil;
-    UIImageView *imageView = [[self alloc] initWithImage:image] ;
-    return imageView;
++ (instancetype)ly_imageViewWithImageName:(NSString *)imageName {
+    UIImage *image = imageName.length ? [UIImage imageNamed:imageName] : nil;
+    return [[self alloc] initWithImage:image] ;
 }
 
 @end

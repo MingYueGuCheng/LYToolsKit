@@ -7,9 +7,8 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <SystemConfiguration/SystemConfiguration.h>
+@import SystemConfiguration;
 #import <netinet/in.h>
-
 
 typedef enum : NSInteger {
 	LYNetworkStatusNotReachable = 0,
@@ -20,9 +19,7 @@ typedef enum : NSInteger {
 #pragma mark IPv6 Support
 //Reachability fully support IPv6.  For full details, see ReadMe.md.
 
-
 extern NSString *kLYReachabilityChangedNotification;
-
 
 @interface LYReachability : NSObject
 

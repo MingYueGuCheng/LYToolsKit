@@ -15,21 +15,21 @@ Pod::Spec.new do |s|
 
   s.subspec 'Foundation' do |f|
     f.source_files = 'LYToolsKit/Foundation/**/*.{h,m}'
-    f.pod_target_xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
+#    f.xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
   end
 
   s.subspec 'UI' do |u|
     u.source_files = 'LYToolsKit/UI/**/*.{h,m}'
-    u.pod_target_xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
   end
 
   s.subspec 'Utility' do |ut|
     ut.source_files = 'LYToolsKit/Utility/**/*.{h,m}'
-    ut.dependency "Masonry"
-    ut.dependency "LYToolsKit/UI"
+#    ut.dependency "Masonry"
+#    ut.dependency "LYToolsKit/UI"
   end
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+
 end

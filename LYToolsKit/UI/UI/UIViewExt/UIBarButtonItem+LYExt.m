@@ -10,14 +10,7 @@
 
 @implementation UIBarButtonItem (LYExt)
 
-/**
- *  设置导航栏按钮
- *
- *  @param nImageName 普通状态图片
- *  @param hImageName 高亮状态图片
- *  @param action     响应事件
- */
-+ (UIBarButtonItem *)ly_itemWithNormalImageName:(NSString *)nImageName highImageName:(NSString *)hImageName target:(id)target action:(SEL)action {
++ (instancetype)ly_itemWithNormalImageName:(NSString *)nImageName highImageName:(NSString *)hImageName target:(id)target action:(SEL)action {
     UIImage *nImage = nImageName.length ? [UIImage imageNamed:nImageName] : nil;
     UIImage *hImage = hImageName.length ? [UIImage imageNamed:hImageName] : nil;
     
@@ -25,7 +18,7 @@
     [btn setBackgroundImage:nImage forState:UIControlStateNormal];
     [btn setBackgroundImage:hImage forState:UIControlStateHighlighted];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    return [[UIBarButtonItem alloc] initWithCustomView:btn];
+    return [[self alloc] initWithCustomView:btn];
 }
 
 @end

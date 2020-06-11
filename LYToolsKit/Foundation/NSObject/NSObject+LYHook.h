@@ -6,7 +6,7 @@
 //  Copyright © 2017年 LY. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param block 该 block 必须返回一个 block，返回的 block 将被当成 targetSEL 的新实现
  @return 是否重写成功
  */
-+ (BOOL)ly_OverrideImplement:(SEL)targetSEL block:(id(^)(Class originClass, SEL originSEL, IMP originIMP))block;
++ (BOOL)ly_overrideImplement:(SEL)targetSEL block:(id(^)(Class originClass, SEL originSEL, IMP originIMP))block;
 /**
  block重写方式实现
  void(*)(id, SEL, ...)
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param block 该 block 必须返回一个 block，返回的 block 将被当成 targetSEL 的新实现
  @return 是否重写成功
  */
-- (BOOL)ly_OverrideImplement:(SEL)targetSEL block:(id(^)(Class originClass, SEL originSEL, IMP originIMP))block;
+- (BOOL)ly_overrideImplement:(SEL)targetSEL block:(id(^)(Class originClass, SEL originSEL, IMP originIMP))block;
 /**
  hook类方法的实现
 

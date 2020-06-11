@@ -6,19 +6,19 @@
 //  Copyright (c) 2015年 sdb. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 感谢@Yi Xu,<youyouapp><CuiYiLong>，提供的方法
 @interface NSString (LYUnits)
 
-/**
- 获取数据大小 单位：KB、MB、GB
- @param fileSize 文件字节大小
- @return 数据大小
- @code 感谢@Yi Xu,<youyouapp><CuiYiLong>
- */
+/// 获取数据大小 单位：KB、MB、GB
+/// @param fileSize 文件字节大小,单位：字节(B)
 + (instancetype)ly_fileSizeToString:(unsigned long long)fileSize;
+
+/// 获取数据大小 单位：KB、MB、GB
+/// @param data 数据
 + (instancetype)ly_fileSizeFromData:(NSData *)data;
 + (CGFloat)ly_fileSizeKBFromData:(NSData *)data;
 + (CGFloat)ly_fileSizeMBFromData:(NSData *)data;

@@ -12,14 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITextField (LYExt)
 
-/**  快速创建
- *
- *  @param  placeholder  占位符
- *  @param  font     字体大小
- *
- *  @return 返回TextField对象
- */
-+ (instancetype)ly_TextFieldWithPlaceholder:(nullable NSString *)placeholder font:(nullable UIFont *)font;
+/// 快速创建
+/// @param placeholder 占位符
+/// @param font 字体
++ (instancetype)ly_textFieldWithPlaceholder:(nullable NSString *)placeholder font:(nullable UIFont *)font;
 
 @end
 
