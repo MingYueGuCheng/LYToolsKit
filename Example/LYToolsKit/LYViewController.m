@@ -15,6 +15,8 @@ typedef void(^Blick)(void);
 @interface LYViewController ()
 @property (nonatomic, strong) UIButton *linkBtn;
 @property (nonatomic, strong) UILabel *countLabel;
+@property (nonatomic, strong) UIButton *hoverBtn;
+
 @end
 
 @implementation LYViewController
@@ -33,7 +35,6 @@ typedef void(^Blick)(void);
     [btn1 setTitle:@"啧啧啧" forState:UIControlStateNormal];
     [self.view addSubview:btn1];
     self.linkBtn = btn1;
-
     [self.class ly_overrideImplement:@selector(setName:) block:^id _Nonnull(Class  _Nonnull __unsafe_unretained originClass, SEL  _Nonnull originSEL, IMP  _Nonnull originIMP) {
         return ^(id obj, NSString *name) {
             self.title = name;
@@ -41,17 +42,50 @@ typedef void(^Blick)(void);
     }];
     
     LYCountingLabel *countLabel = [[LYCountingLabel alloc] init];
+//    countLabel.format = @"%d";
+    countLabel.formatBlock = ^NSString *(CGFloat value) {
+        return [self countNumAndChangeformat:(int)value];
+    };
+    [countLabel countFrom:100000 to:1 withDuration:20];
     [self.view addSubview:countLabel];
     self.countLabel = countLabel;
     
+    LYHoverButton *hoverButton = [LYHoverButton buttonWithType:UIButtonTypeCustom];
+    hoverButton.backgroundColor = UIColor.redColor;
+    hoverButton.frame = CGRectMake(30, 200, 80, 40);
+    [self.view addSubview:hoverButton];
+    self.hoverBtn = hoverButton;
 //    [self ly_hookOrigMethod:@selector(btnClick) newMethod:meth];
 //    [self ly_hookOrigMethod:@selector(btnClick) newMethod:@selector(my_btnClick1:)];
+}
+
+- (NSString *)countNumAndChangeformat:(int)tmpNum {
+    NSString *num = [NSString stringWithFormat:@"%d", tmpNum];
+    
+    int count = 0;
+    long long int a = num.longLongValue;
+    while (a != 0) {
+        count++;
+        a /= 10;
+    }
+    NSMutableString *string = [NSMutableString stringWithString:num];
+    NSMutableString *newstring = [NSMutableString string];
+    while (count > 3) {
+        count -= 3;
+        NSRange rang = NSMakeRange(string.length - 3, 3);
+        NSString *str = [string substringWithRange:rang];
+        [newstring insertString:str atIndex:0];
+        [newstring insertString:@"," atIndex:0];
+        [string deleteCharactersInRange:rang];
+    }
+    [newstring insertString:string atIndex:0];
+    return newstring;
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     self.linkBtn.frame = CGRectMake(30, 100, 100, 40);
-    self.countLabel.frame = CGRectMake(30, 150, 100, 40);
+    self.countLabel.frame = CGRectMake(30, 150, 200, 40);
 }
 
 - (void)btnClick {

@@ -6,12 +6,12 @@
 //
 
 #import "UIDevice+LYHardware.h"
+@import CoreTelephony;
 #import "LYReachability.h"
 #import <sys/utsname.h>
 #import <sys/sysctl.h>
 #include <net/if.h>
 #include <net/if_dl.h>
-@import CoreTelephony;
 
 @implementation UIDevice (LYHardware)
 

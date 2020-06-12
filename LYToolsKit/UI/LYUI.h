@@ -29,11 +29,6 @@
 #pragma mark - UIButton
 #import <LYToolsKit/UIButton+LYDelay.h>
 
-#pragma mark - UILabel
-
-#pragma mark - UIAlertController
-#import <LYToolsKit/LYAlertController.h>
-
 #pragma mark - UIImage
 #import <LYToolsKit/UIImage+LYResize.h>
 #import <LYToolsKit/UIImage+LYBase64.h>

@@ -5,7 +5,7 @@
 //
 //  Created by 似水灵修 on 13-11-11.
 //  Copyright (c) 2013年 MingYueGuCheng. All rights reserved.
-//  显示操作轴迹
+//  显示触摸痕迹
 
 /**
  * 使用方法

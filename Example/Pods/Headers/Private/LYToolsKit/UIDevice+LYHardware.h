@@ -1,1 +1,1 @@
-../../../../../LYToolsKit/UI/UI/UIDevice/UIDevice+LYHardware.h
+../../../../../LYToolsKit/UI/UIDevice/UIDevice+LYHardware.h

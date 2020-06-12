@@ -1,1 +1,1 @@
-../../../../../LYToolsKit/Utility/UIApplication/LYTouchTrace.h
+../../../../../LYToolsKit/Utility/TouchTrace/LYTouchTrace.h

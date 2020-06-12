@@ -24,8 +24,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'Utility' do |ut|
     ut.source_files = 'LYToolsKit/Utility/**/*.{h,m}'
-#    ut.dependency "Masonry"
-#    ut.dependency "LYToolsKit/UI"
   end
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

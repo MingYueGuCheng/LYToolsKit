@@ -126,8 +126,7 @@ static CGFloat kLabelCounterRate = 3.0;
     if(self.format == nil)
         self.format = @"%d";
 
-    switch(self.method)
-    {
+    switch(self.method) {
         case LYLabelCountingMethodLinear:
             self.counter = [[LYLabelCounterLinear alloc] init];
             break;
@@ -187,23 +186,14 @@ static CGFloat kLabelCounterRate = 3.0;
 - (void)setTextValue:(CGFloat)value {
     if (self.attributedFormatBlock != nil) {
         self.attributedText = self.attributedFormatBlock(value);
-    }
-    else if(self.formatBlock != nil)
-    {
+    } else if(self.formatBlock != nil) {
         self.text = self.formatBlock(value);
-    }
-    else
-    {
+    } else {
         // check if counting with ints - cast to int
-        if([self.format rangeOfString:@"%(.*)d" options:NSRegularExpressionSearch].location != NSNotFound || [self.format rangeOfString:@"%(.*)i"].location != NSNotFound )
-        {
-//            self.text = [NSString stringWithFormat:self.format,(int)value];
-            self.text = [self countNumAndChangeformat:(int)value];
-        }
-        else
-        {
-//            self.text = [NSString stringWithFormat:self.format,value];
-            self.text = [self countNumAndChangeformat:value];
+        if([self.format rangeOfString:@"%(.*)d" options:NSRegularExpressionSearch].location != NSNotFound || [self.format rangeOfString:@"%(.*)i"].location != NSNotFound) {
+            self.text = [NSString stringWithFormat:self.format, (int)value];
+        } else {
+            self.text = [NSString stringWithFormat:self.format, value];
         }
     }
 }
@@ -212,29 +202,6 @@ static CGFloat kLabelCounterRate = 3.0;
     _format = format;
     // update label with new format
     [self setTextValue:self.currentValue];
-}
-
-- (NSString *)countNumAndChangeformat:(int)tmpNum {
-    NSString *num = [NSString stringWithFormat:@"%d", tmpNum];
-    
-    int count = 0;
-    long long int a = num.longLongValue;
-    while (a != 0) {
-        count++;
-        a /= 10;
-    }
-    NSMutableString *string = [NSMutableString stringWithString:num];
-    NSMutableString *newstring = [NSMutableString string];
-    while (count > 3) {
-        count -= 3;
-        NSRange rang = NSMakeRange(string.length - 3, 3);
-        NSString *str = [string substringWithRange:rang];
-        [newstring insertString:str atIndex:0];
-        [newstring insertString:@"," atIndex:0];
-        [string deleteCharactersInRange:rang];
-    }
-    [newstring insertString:string atIndex:0];
-    return newstring;
 }
 
 - (void)runCompletionBlock {

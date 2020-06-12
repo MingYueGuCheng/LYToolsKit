@@ -10,10 +10,10 @@
 @import UIKit;
 
 typedef NS_ENUM(NSInteger, LYLabelCountingMethod) {
+    LYLabelCountingMethodLinear,
     LYLabelCountingMethodEaseInOut,
     LYLabelCountingMethodEaseIn,
     LYLabelCountingMethodEaseOut,
-    LYLabelCountingMethodLinear
 };
 
 typedef NSString* (^LYCountingLabelFormatBlock)(CGFloat value);

@@ -1,1 +1,1 @@
-../../../../../LYToolsKit/Utility/KVO/LYSubscribeManger.h
+../../../../../LYToolsKit/Utility/SubscribeManger/LYSubscribeManger.h
