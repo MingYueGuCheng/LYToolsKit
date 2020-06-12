@@ -6,7 +6,6 @@
 [![Platform](https://img.shields.io/cocoapods/p/LYToolsKit.svg?style=flat)](https://cocoapods.org/pods/LYToolsKit)
 
 ## 功能
-```工具组件
 * Foundation
 1. URL解析｜URL编码｜URL参数拼接
 1. 对象Hook方法
@@ -30,7 +29,6 @@
 1. 超链接按钮
 1. 悬浮按钮
 1. 倒计时Label
-```
 
 ## 说明
 LYToolsKit 是一个轻量级的常用组件库，对Foundation、UI简单扩展，可以极大的提高开发效率。
