@@ -17,3 +17,5 @@
 * [ADD]
 - 'UIColor+LYString'支持 P3 color space
 - 'UIDevice+LYHardware'添加获取bundle Seed ID 方法
+### [1.1.0]
+- [ADD]-屏幕导航栏尺寸获取方法
