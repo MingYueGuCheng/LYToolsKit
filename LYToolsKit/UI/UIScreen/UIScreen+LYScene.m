@@ -18,7 +18,7 @@ static CGFloat navigationBarHeight_t = 0.0;
 static CGFloat statusBarHeight_t = 0.0;
 static CGFloat tabBarHeight_t = 0.0;
 
-@implementation UIScreen (MDFScreen)
+@implementation UIScreen (LYScene)
 
 + (CGFloat)ly_navigationBarHeight {
     if (navigationBarHeight_t < 1) {

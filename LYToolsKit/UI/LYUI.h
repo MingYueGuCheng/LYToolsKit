@@ -40,5 +40,8 @@
 #pragma mark - UIColor
 #import <LYToolsKit/UIColor+LYString.h>
 
+#pragma mark - UIScreen
+#import <LYToolsKit/UIScreen+LYScene.h>
+
 
 #endif /* LYUI_h */

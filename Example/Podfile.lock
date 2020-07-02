@@ -1,11 +1,11 @@
 PODS:
-  - LYToolsKit (1.0.0):
-    - LYToolsKit/Foundation (= 1.0.0)
-    - LYToolsKit/UI (= 1.0.0)
-    - LYToolsKit/Utility (= 1.0.0)
-  - LYToolsKit/Foundation (1.0.0)
-  - LYToolsKit/UI (1.0.0)
-  - LYToolsKit/Utility (1.0.0)
+  - LYToolsKit (1.1.0):
+    - LYToolsKit/Foundation (= 1.1.0)
+    - LYToolsKit/UI (= 1.1.0)
+    - LYToolsKit/Utility (= 1.1.0)
+  - LYToolsKit/Foundation (1.1.0)
+  - LYToolsKit/UI (1.1.0)
+  - LYToolsKit/Utility (1.1.0)
 
 DEPENDENCIES:
   - LYToolsKit (from `../`)
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LYToolsKit: 775e803fc7e674d3d73b0b261fc44d90e1f95e9d
+  LYToolsKit: be1630d45d3367f2942bcb021dabfc0325949f22
 
 PODFILE CHECKSUM: ea93a2831d7751ee19cfcfcf7b57514c1392ef45
 

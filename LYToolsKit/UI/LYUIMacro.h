@@ -15,6 +15,11 @@
 #define kScreenWidth  ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
 
+#define kNavigationBarHeight (UIScreen.ly_navigationBarHeight)
+#define kStatusBarHeight (UIScreen.ly_statusBarHeight)
+#define kTabBarHeight (UIScreen.ly_tabBarHeight)
+
+
 #endif
 
 #endif /* LYUIMacro_h */
